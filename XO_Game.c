@@ -58,6 +58,7 @@ int main()
         printf("Do you want to play again ? (y/n) : ");
         scanf(" %c", &reset_game);
         reset_game = tolower(reset_game);
+
     } while (reset_game == 'y');
 
     return 0;
@@ -117,6 +118,7 @@ void Player__turn()
         printf("Enter Your Position  Row (1-3) : ");
         scanf("%d", &x);
         x--; // to convert 1,2,3 to 0,1,2
+
         printf("Enter Your Position  Column (1-3) : ");
         scanf("%d", &y);
         y--; // to convert 1,2,3 to 0,1,2
@@ -133,6 +135,7 @@ void Player__turn()
         }
     } while (Board[x][y] != ' ');
 };
+
 void Computer__turn()
 {
 
@@ -155,6 +158,7 @@ void Computer__turn()
         Print__Winner(' ');
     }
 };
+
 char Check__Win()
 {
 
@@ -187,6 +191,7 @@ char Check__Win()
 
     return ' ';
 };
+
 void Print__Winner(char winner)
 {
 
